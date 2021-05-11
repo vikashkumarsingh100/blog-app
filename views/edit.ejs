@@ -1,0 +1,25 @@
+<%- include("partials/header") %>
+
+<div class="container">
+    <form action="/blogs/<%= data._id %>?_method=put" method="POST">
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" name="title" value="<%= data.title %>" id="title" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="image">Image Link</label>
+            <input type="text" name="image"value="<%= data.image %>" id="image" required class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="body">Body</label>
+          <textarea name="body" id="body" rows="4" class="form-control" required><%= data.body %></textarea>
+        </div>
+       
+
+       <button class="submit btn-success btn-lg">submit</button>
+
+    </form>
+</div>
+
+
+<%- include("partials/footer") %>

@@ -1,0 +1,22 @@
+
+<%- include("partials/header") %>
+
+<div class="container col-lg-8">
+    <h1 class="display-5"><%= result.title %></h1>
+    <img src="<%= result.image %>">
+    <h1 class="display-6"><%= result.body %></h1>
+    <a href="/blogs/<%= result._id %>/edit" class="btn btn-lg btn-outline-danger">Edit</a>
+    <form class="form-row p-1"action="/blogs/<%= result._id %>?_method=delete" method="POST">
+        <button class="submit btn-outline-danger btn-lg">Delete</button>
+    </form>
+</div>
+
+
+
+
+
+
+
+
+
+<%- include("partials/footer") %>
